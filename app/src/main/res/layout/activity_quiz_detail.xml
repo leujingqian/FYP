@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".View.QuizDetail">
+
+    <TextView
+        android:id="@+id/qd_title"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_weight="1"
+        android:text="TextView1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="25dp"
+        />
+
+    <TextView
+        android:id="@+id/qd_creator"
+        android:layout_width="205dp"
+        android:layout_height="58dp"
+        android:layout_weight="1"
+        android:background="@android:color/holo_blue_bright"
+        android:gravity="center"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qd_title" />
+
+    <TextView
+        android:id="@+id/qd_totalplays"
+        android:layout_width="232dp"
+        android:layout_height="56dp"
+        android:background="@android:color/holo_blue_bright"
+        android:gravity="center"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/qd_creator"
+        app:layout_constraintTop_toBottomOf="@+id/qd_title" />
+
+    <TextView
+        android:id="@+id/qd_question"
+        android:layout_width="408dp"
+        android:layout_height="378dp"
+        android:layout_weight="1"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qd_totalplays" />
+
+    <Button
+        android:id="@+id/mcq"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="64dp"
+        android:text="MCQ"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qd_question" />
+
+    <Button
+        android:id="@+id/shortans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="64dp"
+        android:text="Short Answer"
+        app:layout_constraintStart_toEndOf="@+id/mcq"
+        app:layout_constraintTop_toBottomOf="@+id/qd_question" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

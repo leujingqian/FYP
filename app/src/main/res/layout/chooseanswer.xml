@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/questionnumber"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="20dp"/>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="741dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="85dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="304dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="11dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/A"
+                android:layout_width="190dp"
+                android:layout_height="304dp"
+                android:layout_below="@+id/A"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="2dp"
+                android:background="#e21a3b"
+                android:text="A" />
+
+            <Button
+                android:id="@+id/B"
+                android:layout_width="201dp"
+                android:layout_height="346dp"
+                android:layout_below="@+id/questionnumber"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:background="#6769f0"
+                android:text="B" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="304dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="1dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/C"
+                android:layout_width="193dp"
+                android:layout_height="304dp"
+                android:layout_below="@+id/A"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="2dp"
+                android:background="#16d46c"
+                android:text="C" />
+
+            <Button
+                android:id="@+id/D"
+                android:layout_width="203dp"
+                android:layout_height="304dp"
+                android:layout_below="@+id/B"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:background="#f9b516"
+                android:text="D" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="767dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="46dp"
+        android:text="TextView"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="40dp"/>
+
+    <TextView
+        android:id="@+id/studentsummary"
+        android:layout_width="401dp"
+        android:layout_height="429dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="62dp"
+        android:text="TextView" />
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Home" />
+
+    <item
+            android:id="@+id/nav_quizzes"
+            android:icon="@drawable/ic_folder_open_black_24dp"
+            android:title="Quizzes" />
+    <item
+            android:id="@+id/nav_code"
+            android:icon="@drawable/ic_code_black_24dp"
+            android:title="Code" />
+
+    <item
+            android:id="@+id/nav_reports"
+            android:icon="@drawable/ic_report_black_24dp"
+            android:title="Reports" />
+    <item
+            android:id="@+id/nav_menu"
+            android:icon="@drawable/ic_laptop_black_24dp"
+            android:title="Menu" />
+
+</menu>

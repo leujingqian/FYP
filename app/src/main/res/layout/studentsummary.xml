@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/gameover"
+        android:layout_width="match_parent"
+        android:layout_height="188dp"
+        android:text="Game Over" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/correct"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/incorrect"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/unattempt"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:text="TextView" />
+
+</LinearLayout>

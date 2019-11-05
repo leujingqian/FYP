@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".View.createquestion">
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        app:counterMaxLength="200"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/question"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="385dp"
+        android:layout_height="491dp"
+        android:layout_below="@+id/text_input_question"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp">
+
+        <RadioButton
+            android:id="@+id/radio_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:padding="15dp" />
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_choices1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterEnabled="true"
+            app:counterMaxLength="200"
+            app:errorEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Question"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioButton
+            android:id="@+id/radio_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp" />
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_choices2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterEnabled="true"
+            app:counterMaxLength="200"
+            app:errorEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Question"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioButton
+            android:id="@+id/radio_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp" />
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_choices3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterEnabled="true"
+            app:counterMaxLength="200"
+            app:errorEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Question"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioButton
+            android:id="@+id/radio_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp" />
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_choices4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterEnabled="true"
+            app:counterMaxLength="200"
+            app:errorEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Question"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </RadioGroup>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="49dp"
+        android:id="@+id/bt_save"
+        android:text="Save"/>
+
+</RelativeLayout>
