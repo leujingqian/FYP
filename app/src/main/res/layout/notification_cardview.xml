@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:strokeColor="#000000"
+    app:strokeWidth="0.5dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/picture"
+            android:layout_width="105dp"
+            android:layout_height="70dp"
+            android:src="@drawable/contact_profile"></ImageView>
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/notification_cont"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="-45dp"
+            android:layout_marginBottom="-21dp"
+            android:layout_toEndOf="@+id/picture"
+            android:text="Text View"
+            android:textSize="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/notification_cont"
+            android:layout_width="313dp"
+            android:layout_height="46dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="-1dp"
+            android:layout_toEndOf="@+id/picture"
+            android:text="Notification Content"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:textSize="16dp"></TextView>
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

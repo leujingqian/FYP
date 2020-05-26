@@ -12,9 +12,9 @@ public class Choice {
     @SerializedName("choice")
     @Expose
     private String choice;
-    @SerializedName("is_correct_answer")
+    @SerializedName("is_correct")
     @Expose
-    private Boolean isCorrectAnswer;
+    private Boolean isCorrect;
 
     public String getId() {
         return id;
@@ -32,12 +32,12 @@ public class Choice {
         this.choice = choice;
     }
 
-    public Boolean getIsCorrectAnswer() {
-        return isCorrectAnswer;
+    public Boolean getIsCorrect() {
+        return isCorrect;
     }
 
-    public void setIsCorrectAnswer(Boolean isCorrectAnswer) {
-        this.isCorrectAnswer = isCorrectAnswer;
+    public void setIsCorrect(Boolean isCorrect) {
+        this.isCorrect = isCorrect;
     }
 
 }

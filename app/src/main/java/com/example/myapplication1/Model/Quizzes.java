@@ -6,7 +6,9 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class Quizzes {
-
+    @SerializedName("plays")
+    @Expose
+    private Integer plays;
     @SerializedName("_id")
     @Expose
     private String id;
@@ -15,22 +17,27 @@ public class Quizzes {
     private String title;
     @SerializedName("creator")
     @Expose
-    private String creator;
-    @SerializedName("total_plays")
+    private Creator creator;
+    @SerializedName("questions")
     @Expose
-    private Integer totalPlays;
-    @SerializedName("subject")
-    @Expose
-    private String subject;
-    @SerializedName("quiz_type")
-    @Expose
-    private String quizType;
-    @SerializedName("quizQuestions")
-    @Expose
-    private List<QuizQuestion> quizQuestions = null;
+    private List<QuizQuestion> questions = null;
     @SerializedName("__v")
     @Expose
     private Integer v;
+
+    public Quizzes(String title, List<QuizQuestion> questions) {
+
+        this.title = title;
+        this.questions = questions;
+    }
+
+    public Integer getPlays() {
+        return plays;
+    }
+
+    public void setPlays(Integer plays) {
+        this.plays = plays;
+    }
 
     public String getId() {
         return id;
@@ -48,44 +55,20 @@ public class Quizzes {
         this.title = title;
     }
 
-    public String getCreator() {
+    public Creator getCreator() {
         return creator;
     }
 
-    public void setCreator(String creator) {
+    public void setCreator(Creator creator) {
         this.creator = creator;
     }
 
-    public Integer getTotalPlays() {
-        return totalPlays;
+    public List<QuizQuestion> getQuestions() {
+        return questions;
     }
 
-    public void setTotalPlays(Integer totalPlays) {
-        this.totalPlays = totalPlays;
-    }
-
-    public String getSubject() {
-        return subject;
-    }
-
-    public void setSubject(String subject) {
-        this.subject = subject;
-    }
-
-    public String getQuizType() {
-        return quizType;
-    }
-
-    public void setQuizType(String quizType) {
-        this.quizType = quizType;
-    }
-
-    public List<QuizQuestion> getQuizQuestions() {
-        return quizQuestions;
-    }
-
-    public void setQuizQuestions(List<QuizQuestion> quizQuestions) {
-        this.quizQuestions = quizQuestions;
+    public void setQuestions(List<QuizQuestion> questions) {
+        this.questions = questions;
     }
 
     public Integer getV() {
@@ -95,4 +78,5 @@ public class Quizzes {
     public void setV(Integer v) {
         this.v = v;
     }
+
 }

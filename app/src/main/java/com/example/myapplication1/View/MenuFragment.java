@@ -1,5 +1,8 @@
 package com.example.myapplication1.View;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -7,12 +10,15 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.myapplication1.Model.JsonPlaceHolderAPi;
 import com.example.myapplication1.Model.Post;
 import com.example.myapplication1.R;
 
+import java.nio.channels.InterruptedByTimeoutException;
 import java.util.List;
 
 import retrofit2.Call;
@@ -22,47 +28,53 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MenuFragment extends Fragment {
-  private TextView viewmenu;
+  private TextView viewmenu,loginname,loginemail;
+  public Button logout,clasroom;
+  private String name,email;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_menu,container,false);
-         viewmenu=(TextView) view.findViewById(R.id.view_menu);
 
-            Retrofit retrofit =new Retrofit.Builder()
-                .baseUrl("https://jsonplaceholder.typicode.co")
-                    .addConverterFactory(GsonConverterFactory.create())
-                    .build();
+         logout=(Button)view.findViewById(R.id.logout) ;
+         clasroom=view.findViewById(R.id.classroom);
+         loginemail=view.findViewById(R.id.loginemail);
+         loginname=view.findViewById(R.id.loginname);
 
-            JsonPlaceHolderAPi jsonPlaceHolderAPi=retrofit.create(JsonPlaceHolderAPi.class);
-        Call<List<Post>> call=jsonPlaceHolderAPi.getPosts();
-        call.enqueue(new Callback<List<Post>>() {
-            @Override
-            public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
-                if (!response.isSuccessful()){
-                    viewmenu.setText("Code"+response.code());
-                    return;
-                }
-                List<Post> posts=response.body();
-                for(Post post:posts){
-                    String content="";
-                    content+="userid："+post.getUserId()+"\n";
-                    content+="id："+post.getId()+"\n";
-                    content+="title："+post.getTitle()+"\n";
-                    content+="body："+post.getText()+"\n\n";
 
-                    viewmenu.append(content);
-                }
-            }
+        SharedPreferences sharedPreferencetoken = getActivity().getSharedPreferences("userdata", Context.MODE_PRIVATE);
+        String name = sharedPreferencetoken.getString("Username", null);
+        String email = sharedPreferencetoken.getString("email", null);
 
-            @Override
-            public void onFailure(Call<List<Post>> call, Throwable t) {
-                viewmenu.setText(t.getMessage());
+        loginemail.setText(email);
+        loginname.setText(name);
 
-            }
-        });
+         logout.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 SharedPreferences sharedPreferences=getActivity().getSharedPreferences("userdata", Context.MODE_PRIVATE);
+                 final SharedPreferences.Editor editor=sharedPreferences.edit();
+                 String token=sharedPreferences.getString("Tokem",null);
+                 Toast.makeText(getActivity(),token,Toast.LENGTH_SHORT).show();
+                 sharedPreferences.edit().clear().commit();
+                 Intent i=new Intent(getActivity(),Login.class);
+                 i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                 i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                 startActivity(i);
+
+             }
+         });
+
+         clasroom.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 Intent intent=new Intent(getActivity(),classroom.class);
+                 startActivity(intent);
+             }
+         });
 
 return view;
+
     }
 
 

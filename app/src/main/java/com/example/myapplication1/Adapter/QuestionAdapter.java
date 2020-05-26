@@ -3,6 +3,8 @@ package com.example.myapplication1.Adapter;
 import android.content.Context;
 
 import androidx.annotation.NonNull;
+
+import com.example.myapplication1.Model.QuestionList;
 import com.google.android.material.textfield.TextInputLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,23 +13,21 @@ import android.view.ViewGroup;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
-import com.example.myapplication1.Model.Question;
 import com.example.myapplication1.R;
-
 import java.util.ArrayList;
 
 public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHolder> {
-    private ArrayList<Question> question_list;
+    private ArrayList<QuestionList> question_list;
     private Context context;
     private OnItemClickListener mlistener;
 
     public interface OnItemClickListener{
-        void OnItemClick(int position);
+        void onItemClick(int position);
     }
     public void setOnItemClickListerner(OnItemClickListener listener){
         mlistener=listener;
     }
-    public QuestionAdapter(ArrayList<Question> question_list, Context context) {
+    public QuestionAdapter(ArrayList<QuestionList> question_list, Context context) {
         this.context = context;
         this.question_list = question_list;
     }
@@ -53,22 +53,24 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHo
             choices2=v.findViewById(R.id.text_input_choices2);
             choices3=v.findViewById(R.id.text_input_choices3);
             choices4=v.findViewById(R.id.text_input_choices4);
-            radio1=v.findViewById(R.id.radio_one);
-            radio2=v.findViewById(R.id.radio_two);
-            radio3=v.findViewById(R.id.radio_three);
-            radio4=v.findViewById(R.id.radio_four);
+            radio1=v.findViewById(R.id.checkBox_one);
+            radio2=v.findViewById(R.id.checkBox_two);
+            radio3=v.findViewById(R.id.checkBox_three);
+            radio4=v.findViewById(R.id.checkBox_four);
 
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (question_list != null) {
-                        int position = getAdapterPosition();
-                        if (position != RecyclerView.NO_POSITION) {
-                            mlistener.OnItemClick(position);
+                    if(mlistener!=null){
+                        int position=getAdapterPosition();
+                        if(position!=RecyclerView.NO_POSITION){
+                            mlistener.onItemClick(position);
                         }
                     }
                 }
             });
+
+
 
 
         }
@@ -77,7 +79,7 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-        Question currentItem=question_list.get(i);
+        QuestionList currentItem=question_list.get(i);
         viewHolder.tv_question.setText(currentItem.getQuestion());
     }
 
@@ -94,7 +96,6 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHo
     public int getItemCount() {
         return question_list.size();
     }
-
 
 
         }

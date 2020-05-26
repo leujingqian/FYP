@@ -17,7 +17,7 @@ public class QuizQuestion {
     private String question;
     @SerializedName("timer")
     @Expose
-    private Integer timer;
+    private int timer;
 
     public List<Choice> getChoices() {
         return choices;
@@ -43,7 +43,7 @@ public class QuizQuestion {
         this.question = question;
     }
 
-    public Integer getTimer() {
+    public int getTimer() {
         return timer;
     }
 

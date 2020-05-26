@@ -27,14 +27,6 @@ public class QuizzFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_quizz, container, false);
-        button =(ImageButton)v.findViewById(R.id.create_button);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent=new Intent(getActivity(),createquiz.class);
-                startActivity(intent);
-            }
-
-        });
 
         viewPager=(ViewPager)v.findViewById(R.id.viewPager);
         tabLayout=(TabLayout)v.findViewById(R.id.tabLayout);

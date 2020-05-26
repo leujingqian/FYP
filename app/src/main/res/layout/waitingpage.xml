@@ -14,7 +14,7 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="619dp"
+        android:layout_height="644dp"
         android:background="#FF9933"
         android:gravity="center"
         android:text="You Are In! \n See Your nickname on screen ?"

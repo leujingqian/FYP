@@ -1,0 +1,236 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.FragmentHostedDetailReport">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/relativelayout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="182dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/linearlayout0"
+            android:layout_width="134dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/played_correctbutton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="24dp"
+                android:background="@drawable/correctbutton"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#16D46B"
+                android:gravity="center"
+                android:text="Correct"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_marginRight="15dp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="134dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/played_incorrectbutton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="24dp"
+                android:background="@drawable/incorrectbutton"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#E21A3C"
+                android:gravity="center"
+                android:text="Incorrect"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_marginRight="15dp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/played_unattemptbutton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="24dp"
+                android:background="@drawable/unattemptbutton"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#6C757D"
+                android:gravity="center"
+                android:text="Unattempt"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_marginRight="15dp"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="160dp"
+            android:layout_below="@+id/relativelayout"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="134dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:orientation="vertical"
+                >
+
+                <Button
+                    android:id="@+id/accuracy_button"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="24dp"
+                    android:background="@drawable/reportbutton"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center"
+                    android:text="Points"
+                    android:textColor="#ffffff"
+                    android:background="#0000ff"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="134dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/Questions_button"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="24dp"
+                    android:background="@drawable/reportbutton"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="Accuracy"
+                    android:textColor="#ffffff"
+                    android:background="#0000ff"
+                    android:textStyle="bold"
+                    android:layout_marginRight="15dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="143dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/Players_button"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="24dp"
+                    android:background="@drawable/reportbutton"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="Rank"
+                    android:textColor="#ffffff"
+                    android:background="#0000ff"
+                    android:textStyle="bold"
+                    android:layout_marginRight="15dp"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/finalleaderboard"
+            android:layout_width="415dp"
+            android:layout_height="61dp"
+            android:layout_below="@+id/linearLayout1"
+            android:layout_alignEnd="@+id/linearLayout1"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="-7dp"
+            android:background="#0000ff"
+            android:gravity="center"
+            android:text="Final Leaderboard"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:textStyle="bold"></TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/scoreboard_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/finalleaderboard"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="4dp"
+            android:scrollbars="vertical" />
+
+    </RelativeLayout>
+
+</FrameLayout>

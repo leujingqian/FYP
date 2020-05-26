@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:padding="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp">
+
+
+        <TextView
+            android:id="@+id/studentname"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:text="Student name"
+            android:textColor="#000000"
+            android:textSize="15dp"/>
+
+
+        <TextView
+            android:id="@+id/studentaccuracy"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_toEndOf="@+id/studentname"
+            android:text="100%"
+            android:textColor="#000000"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:id="@+id/correctnum"
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@+id/studentaccuracy"
+            android:text="10"
+            android:textColor="#000000"
+            android:textSize="15dp"/>
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_toEndOf="@+id/correctnum"
+            android:background="@drawable/correctbutton" />
+
+        <TextView
+            android:id="@+id/incorrectnum"
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@+id/button8"
+            android:text="10"
+            android:textColor="#000000"
+            android:textSize="15dp"/>
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_toEndOf="@+id/incorrectnum"
+            android:background="@drawable/incorrectbutton" />
+
+        <TextView
+            android:id="@+id/unattemptnum"
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@+id/button9"
+            android:text="10"
+            android:textColor="#000000"
+            android:textSize="15dp"/>
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_toEndOf="@+id/unattemptnum"
+            android:background="@drawable/unattemptbutton" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

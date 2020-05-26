@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.SettingDialog"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/dialog_bg">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="2dp"></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/questionsetting"
+        android:text="Question Settings"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="20dp">
+
+    </TextView>
+
+    <Switch
+        android:id="@+id/shufflequestions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="Shuffle Question"
+        android:paddingLeft="5dp"
+        android:textSize="15dp"
+        ></Switch>
+
+    <Switch
+        android:id="@+id/shufflechoices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="Shuffle Choices"
+        android:paddingLeft="5dp"
+        android:textSize="15dp"></Switch>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gamesettings"
+        android:text="Game Settings"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="20dp">
+    </TextView>
+        <Switch
+            android:id="@+id/questiontimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Question Timer"
+            android:paddingLeft="5dp"
+            android:textSize="15dp"></Switch>
+
+        <Switch
+            android:id="@+id/movethrough"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Automatically move through questions"
+            android:paddingLeft="5dp"
+            android:textSize="15dp"></Switch>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/assignto"
+        android:text="Assign to"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/assignclass_recyclerview"
+        android:layout_width="374dp"
+        android:layout_height="272dp"
+        android:scrollbars="vertical" />
+
+
+
+</LinearLayout>

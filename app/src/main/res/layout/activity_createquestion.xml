@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,7 +8,14 @@
     tools:context=".View.createquestion">
 
 
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+        <TableRow>
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_question"
         android:layout_width="match_parent"
@@ -24,116 +31,174 @@
             android:inputType="text" />
 
     </com.google.android.material.textfield.TextInputLayout>
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="385dp"
-        android:layout_height="491dp"
-        android:layout_below="@+id/text_input_question"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp">
-
-        <RadioButton
-            android:id="@+id/radio_one"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:padding="15dp" />
+        </TableRow>
 
 
 
+        <TableRow>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/text_input_choices1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:counterEnabled="true"
-            app:counterMaxLength="200"
-            app:errorEnabled="true">
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Question"
-                android:inputType="text" />
-        </com.google.android.material.textfield.TextInputLayout>
+            <CheckBox
+                android:id="@+id/checkBox_one"
+                android:layout_width="wrap_content"
+                android:layout_height="47dp" />
+        </TableRow>
 
-        <RadioButton
-            android:id="@+id/radio_two"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="15dp" />
-
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/text_input_choices2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:counterEnabled="true"
-            app:counterMaxLength="200"
-            app:errorEnabled="true">
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Question"
-                android:inputType="text" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <RadioButton
-            android:id="@+id/radio_three"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="15dp" />
-
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/text_input_choices3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:counterEnabled="true"
-            app:counterMaxLength="200"
-            app:errorEnabled="true">
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Question"
-                android:inputType="text" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <RadioButton
-            android:id="@+id/radio_four"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="15dp" />
-
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/text_input_choices4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:counterEnabled="true"
-            app:counterMaxLength="200"
-            app:errorEnabled="true">
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Question"
-                android:inputType="text" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-    </RadioGroup>
-
-    <Button
-        android:layout_width="match_parent"
+        <TableRow>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_choices1"
+        android:layout_width="391dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="49dp"
-        android:id="@+id/bt_save"
-        android:text="Save"/>
+        android:layout_below="@id/checkBox_one"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="200"
+        app:errorEnabled="true">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Choices 1"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+        </TableRow>
+
+        <TableRow>
+
+            <CheckBox
+                android:id="@+id/checkBox_two"
+                android:layout_width="wrap_content"
+                android:layout_height="47dp" />
+
+        </TableRow>
+
+        <TableRow>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_choices2"
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkBox_two"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="200"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Choices 2"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+        </TableRow>
+
+<TableRow>
+
+    <CheckBox
+        android:id="@+id/checkBox_three"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp" />
+
+</TableRow>
+
+        <TableRow>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_choices3"
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkBox_three"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="200"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Choices 3" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+</TableRow>
+
+
+<TableRow>
+
+    <CheckBox
+        android:id="@+id/checkBox_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</TableRow>
+
+        <TableRow>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_choices4"
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkBox_four"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="200"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Choices 4"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+            <TableRow></TableRow>
+</TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="111dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/question_timer"
+                android:layout_width="391dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_input_choices4"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                app:errorEnabled="true"
+                android:paddingTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Timer （Second)"
+                    android:inputType="number"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </TableRow>
+
+    <TableRow
+        android:paddingLeft="5dp"
+        android:paddingTop="6dp">
+
+        <Button
+            android:id="@+id/bt_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="49dp"
+            android:background="#000000"
+            android:elevation="3dp"
+            android:gravity="center"
+            android:paddingTop="6dp"
+            android:text="Save"
+            android:textColor="#FFFFFF" />
+    </TableRow>
+
+
+    </TableLayout>
 </RelativeLayout>
+
+</ScrollView>

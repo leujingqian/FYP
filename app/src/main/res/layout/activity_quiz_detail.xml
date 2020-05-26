@@ -7,6 +7,81 @@
 
     tools:context=".View.QuizDetail">
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginTop="56dp"
+        android:background="@android:color/holo_blue_bright"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qd_title">
+
+        <TextView
+            android:id="@+id/qd_creator"
+            android:layout_width="199dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:text="TextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/qd_title" />
+
+        <TextView
+            android:id="@+id/qd_totalplays"
+            android:layout_width="217dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/qd_creator"
+            app:layout_constraintTop_toBottomOf="@+id/qd_title" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="414dp"
+        android:layout_height="54dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/sharebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="3dp"
+                android:background="?android:selectableItemBackground"
+                android:tint="@android:color/holo_blue_bright"
+                app:srcCompat="@drawable/ic_share_black_24dp"
+                tools:layout_editor_absoluteX="360dp"
+                tools:layout_editor_absoluteY="108dp" />
+
+            <ImageButton
+                android:id="@+id/favoutitebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="11dp"
+                android:layout_toStartOf="@+id/sharebutton"
+                android:background="?android:selectableItemBackground"
+                app:srcCompat="@drawable/ic_star_black_24dp"
+                tools:layout_editor_absoluteX="305dp"
+                tools:layout_editor_absoluteY="102dp" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
     <TextView
         android:id="@+id/qd_title"
         android:layout_width="match_parent"
@@ -20,56 +95,42 @@
         android:textSize="25dp"
         />
 
-    <TextView
-        android:id="@+id/qd_creator"
-        android:layout_width="205dp"
-        android:layout_height="58dp"
-        android:layout_weight="1"
-        android:background="@android:color/holo_blue_bright"
-        android:gravity="center"
-        android:text="TextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/qd_title" />
-
-    <TextView
-        android:id="@+id/qd_totalplays"
-        android:layout_width="232dp"
-        android:layout_height="56dp"
-        android:background="@android:color/holo_blue_bright"
-        android:gravity="center"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/qd_creator"
-        app:layout_constraintTop_toBottomOf="@+id/qd_title" />
 
     <TextView
         android:id="@+id/qd_question"
         android:layout_width="408dp"
-        android:layout_height="378dp"
+        android:layout_height="31dp"
         android:layout_weight="1"
+        android:text="Questions"
         android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/qd_totalplays" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/showquestion_recycler_view"
+        android:layout_width="430dp"
+        android:layout_height="466dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.502" />
 
     <Button
         android:id="@+id/mcq"
         android:layout_width="130dp"
         android:layout_height="48dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="64dp"
-        android:text="MCQ"
+        android:layout_marginStart="252dp"
+        android:layout_marginTop="20dp"
+        android:text="Host Game"
+        android:background="@drawable/whitebutton"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/qd_question" />
+        app:layout_constraintTop_toBottomOf="@+id/showquestion_recycler_view"
+        app:cornerRadius="4dp"/>
 
-    <Button
-        android:id="@+id/shortans"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="64dp"
-        android:text="Short Answer"
-        app:layout_constraintStart_toEndOf="@+id/mcq"
-        app:layout_constraintTop_toBottomOf="@+id/qd_question" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

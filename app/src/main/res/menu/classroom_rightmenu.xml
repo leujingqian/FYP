@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:Context="classroom">
+
+    <item android:id="@+id/createclass"
+        android:orderInCategory="100"
+        android:title="Create Class"
+        app:showAsAction="never"></item>
+
+    <item android:id="@+id/joinclass"
+        android:orderInCategory="200"
+        android:title="Join Class"
+        app:showAsAction="never"/>
+</menu>

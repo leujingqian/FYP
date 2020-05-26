@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/joinedcv_profileimage"
+            android:layout_width="79dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/ic_account_circle_black_24dp">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/joinedcv_membername"
+            android:layout_width="177dp"
+            android:layout_height="44dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@+id/joinedcv_profileimage"
+            android:gravity="center"
+            android:text="studentname"
+            android:textSize="20dp" />
+
+
+        <!--<ImageButton
+            android:id="@+id/trash"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="-5dp"
+            android:src="@drawable/ic_delete_black_24dp"
+            android:background="@android:color/transparent"/>-->
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,7 +14,6 @@ import com.example.myapplication1.Model.Quizzes;
 import com.example.myapplication1.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 
@@ -37,12 +37,16 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
         public TextView tv_title;
         public TextView tv_creator;
         public TextView tv_totalplays;
+        public RelativeLayout relativeLayout;
 
         public ViewHolder(View v){
             super(v);
             tv_title=v.findViewById(R.id.quiztitle);
             tv_creator=v.findViewById(R.id.creator);
             tv_totalplays=v.findViewById(R.id.questionnum);
+            relativeLayout=v.findViewById(R.id.rl1);
+
+
 
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -62,8 +66,13 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Quizzes currentItem=quizzlist.get(position);
         holder.tv_title.setText(currentItem.getTitle());
-        holder.tv_creator.setText(currentItem.getCreator());
-        holder.tv_totalplays.setText(" "+currentItem.getQuizQuestions().size()+" Questions");//Number of Question
+        holder.tv_creator.setText(currentItem.getCreator().getName());
+        holder.tv_totalplays.setText(" "+currentItem.getQuestions().size()+" Questions");//Number of Question
+        if(position %2 == 1)
+        {
+            holder.relativeLayout.setBackground(context.getResources().getDrawable(R.drawable.triangles_red));
+            //  holder.imageView.setBackgroundColor(Color.parseColor("#FFFFFF"));
+        }
     }
 
     @NonNull

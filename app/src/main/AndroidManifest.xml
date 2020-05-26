@@ -5,19 +5,44 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".Model.App"
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".View.HostingGame"
-            android:screenOrientation="landscape"></activity>
+        <activity android:name=".View.PlayedReportDetail"></activity>
+        <activity android:name=".View.FragmentHostedPlayerReport" />
+        <activity android:name=".View.notification" />
+        <activity android:name=".View.member_list_view" />
+        <activity android:name=".View.joined_memberlistview" />
+        <activity android:name=".View.JoinClass" />
+        <activity
+            android:name=".View.classroom"
+            android:label="Classroom" />
+        <activity android:name=".View.SharedDialog" />
+        <activity android:name=".View.SettingDialog" />
+        <activity android:name=".View.HostedReportDetail" />
+        <activity android:name=".View.PlayedFragment" />
+        <activity android:name=".View.HostedFragment" />
+        <activity android:name=".View.MainActivity" />
+        <activity android:name=".View.Register" />
+        <activity
+            android:name=".View.HostingGame"
+            android:screenOrientation="landscape" />
         <activity android:name=".View.QuizDetail" />
         <activity android:name=".View.LiveGame" />
-        <activity android:name=".View.createquestion" />
-        <activity android:name=".View.MainActivity">
+        <activity
+            android:name=".View.CreateClass"
+            android:label="Create Class" />
+        <activity
+            android:name=".View.createquestion"
+            android:label="Add Question" />
+        <activity android:name=".View.Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

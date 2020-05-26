@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.member_list_view"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:layout_margin="5dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Teacher"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="25dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/joined_profileimage"
+                android:layout_width="79dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:src="@drawable/ic_account_circle_black_24dp">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/joined_adminname"
+                android:layout_width="177dp"
+                android:layout_height="44dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@+id/joined_profileimage"
+                android:text="studentname"
+                android:gravity="center"
+                android:textSize="20dp"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Student"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="25dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_bright"
+        android:id="@+id/joined_memberlist_recyclerview"
+        android:scrollbars="vertical"/>
+</LinearLayout>

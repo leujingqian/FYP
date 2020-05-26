@@ -11,51 +11,54 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_quiztitle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:errorEnabled="true">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Quiz Title"
-            android:inputType="textEmailAddress" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_input_description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="89dp"
         app:counterEnabled="true"
         app:counterMaxLength="200"
         app:errorEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Description"
-            android:inputType="text" />
+            android:layout_height="44dp"
+            android:hint="Quiz Title"
+            android:inputType="textEmailAddress" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/question_card_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="442dp"
+        android:layout_height="575dp"
         android:scrollbars="vertical"
         tools:listitem="@layout/cv_question" />
 
 
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="3dp"
+   >
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Add Question"
-        android:id="@+id/bt_addquestion"/>
+        android:id="@+id/bt_addquestion"
+        android:background="@drawable/whitebutton"
+        android:layout_marginBottom="5dp"
+        android:elevation="3dp"
+
+        />
+
     <Button
+        android:id="@+id/bt_upload"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Confirm"
-        android:id="@+id/bt_upload"/>
+        android:textColor="#FFFFFF"
+        android:background="#000000"
+        android:elevation="3dp"
 
+        />
 
+</LinearLayout>
 </LinearLayout>

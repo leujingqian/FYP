@@ -1,12 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" android:background="@android:color/holo_blue_bright"
-    android:padding="8dp">
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"  android:id="@+id/view_menu"/>
-</androidx.core.widget.NestedScrollView>
+
+    <ImageView
+        android:id="@+id/profileimage"
+        android:layout_width="match_parent"
+        android:layout_height="253dp"
+        android:src="@drawable/contact_profile" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/loginname"
+        android:layout_below="@id/profileimage"
+        android:text="Name"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        android:textStyle="bold"/>
+
+
+    <TextView
+        android:id="@+id/loginemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginname"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="Email"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        android:textStyle="bold"/>
+
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="17dp"
+        android:background="@android:color/transparent"
+        android:text="Logout" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/classroom"
+        android:layout_marginTop="7dp"
+        android:background="@android:color/darker_gray"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" />
+
+    <Button
+        android:id="@+id/classroom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginemail"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="17dp"
+        android:background="@android:color/transparent"
+        android:text="Classroom"></Button>
+
 </RelativeLayout>
